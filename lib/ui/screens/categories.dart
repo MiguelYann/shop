@@ -6,6 +6,7 @@ class CategorieScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView(
+      padding: const EdgeInsets.all(25),
       children: <Widget>[
         ...DUMMY_CATEGORIES
             .map((category) => CategoryItem(
@@ -15,7 +16,7 @@ class CategorieScreen extends StatelessWidget {
             .toList()
       ],
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 150,
+          maxCrossAxisExtent: 190,
           childAspectRatio: 1.5,
           crossAxisSpacing: 30,
           mainAxisSpacing: 20),

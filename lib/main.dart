@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Shop',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.amber,
+        fontFamily: 'Raleway'
       ),
       home: Scaffold(
         appBar: AppBar(
