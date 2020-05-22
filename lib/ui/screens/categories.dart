@@ -3,6 +3,7 @@ import 'package:shop/data/models/fake_categories_data.dart';
 import 'package:shop/ui/resources/widgets/category_item.dart';
 
 class CategoryScreen extends StatelessWidget {
+  static const routeName = '/';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CategoryDetailsScreen extends StatelessWidget {
-  static final String routename = '/categories-details';
+  static const String routename = '/categories-details';
 
   @override
   Widget build(BuildContext context) {
-    final Map<String,String> categoryDetails =
-        ModalRoute.of(context).settings.arguments ;
+    final Map<String, String> categoryDetails =
+        ModalRoute.of(context).settings.arguments;
     final categoryId = categoryDetails['id'];
     final categoryTitle = categoryDetails['title'];
     return Scaffold(

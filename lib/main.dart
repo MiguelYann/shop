@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop/ui/resources/widgets/category_details.dart';
 import 'package:shop/ui/screens/categories.dart';
+
+import 'ui/screens/category_details.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,9 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
+      initialRoute: CategoryScreen.routeName,
       routes: {
-        '/': (ctxx) => CategoryScreen(),
+        CategoryScreen.routeName: (ctxx) => CategoryScreen(),
         CategoryDetailsScreen.routename: (ctx) => CategoryDetailsScreen(),
       },
       title: 'Shop',
