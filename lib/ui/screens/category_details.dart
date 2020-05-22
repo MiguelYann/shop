@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CategoryDetails extends StatelessWidget {
+class CategoryDetailsScreen extends StatelessWidget {
   static final String routename = '/categories-details';
 
   @override

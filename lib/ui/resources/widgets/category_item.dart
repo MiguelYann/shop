@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shop/ui/resources/widgets/category_details.dart';
+import 'package:shop/ui/screens/category_details.dart';
 
 class CategoryItem extends StatelessWidget {
   final String id;
@@ -11,7 +11,7 @@ class CategoryItem extends StatelessWidget {
       : super(key: key);
 
   void goToDetailsCategory(BuildContext aContext) {
-    Navigator.of(aContext).pushNamed(CategoryDetails.routename, arguments: 
+    Navigator.of(aContext).pushNamed(CategoryDetailsScreen.routename, arguments: 
       {
         'id': id,
         'title': title,

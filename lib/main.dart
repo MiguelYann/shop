@@ -9,17 +9,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: '/',
       routes: {
-        CategoryDetails.routename: (ctx) => CategoryDetails(),
+        '/': (ctxx) => CategoryScreen(),
+        CategoryDetailsScreen.routename: (ctx) => CategoryDetailsScreen(),
       },
       title: 'Shop',
       theme: ThemeData(primarySwatch: Colors.amber, fontFamily: 'Raleway'),
-      home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.amber,
-            title: Text('Shop'),
-          ),
-          body: CategorieScreen()),
     );
   }
 }
