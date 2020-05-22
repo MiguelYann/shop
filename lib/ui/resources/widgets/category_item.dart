@@ -3,14 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:shop/ui/resources/widgets/category_details.dart';
 
 class CategoryItem extends StatelessWidget {
+  final String id;
   final String title;
   final Color color;
 
-  const CategoryItem({Key key, this.title, this.color}) : super(key: key);
+  const CategoryItem({Key key, this.title, this.color, this.id})
+      : super(key: key);
 
   void goToDetailsCategory(BuildContext aContext) {
-    Navigator.of(aContext)
-        .push(CupertinoPageRoute(builder: (_) => CategoryDetails()));
+    Navigator.of(aContext).pushNamed(CategoryDetails.routename, arguments: 
+      {
+        'id': id,
+        'title': title,
+      } 
+    );
   }
 
   @override
@@ -24,6 +30,7 @@ class CategoryItem extends StatelessWidget {
         child: Center(
           child: Text(
             title,
+            style: TextStyle(fontWeight: FontWeight.w700),
           ),
         ),
         decoration: BoxDecoration(
